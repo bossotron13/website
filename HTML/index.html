@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    
+    <!--//region [Red] || CSS Call-->
+
+    <link rel="stylesheet"
+          type="text/css"
+          href="../CSS/style.css" 
+          />   
+    <!--//endregion-->
+
+
+    <!--//region [Orange] || Fonts-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+
+    <!--//endregion-->
+
+
+    <!--//region [Blue] || HTML Code-->
+    <head>
+        <title>First website!</title>
+        <div id="navbar">
+            <a id="home"    onclick = "setClass(this, true);" class="selected" type="button">Home</a>
+            <a id="contact" onclick = "setClass(this, true);" class="non" type="button">Contact</a>
+            <a id="help"    onclick = "setClass(this, true);" class="non" type="button">Help</a>
+            <a id="about"   onclick = "setClass(this, true);" class="non" type="button">About</a>
+            
+        </div>
+    </head>
+    <body onscroll="checkScroll()">
+
+        <div id="Home" class="active" >
+            <!--
+            <div id = "Banner">
+                <h1>Welcome!</h1>
+            </div>
+            -->
+            <div id = "content">
+                <h3>Hello! this is a website about bossotron13!</h3>
+                <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi. Morbi leo urna molestie at elementum. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Luctus venenatis lectus magna fringilla urna porttitor. Facilisi etiam dignissim diam quis enim lobortis. Non curabitur gravida arcu ac. Leo a diam sollicitudin tempor. Arcu non sodales neque sodales ut etiam. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. Ultrices dui sapien eget mi proin sed. Nibh praesent tristique magna sit amet purus. Sapien eget mi proin sed libero enim sed faucibus. Faucibus in ornare quam viverra orci sagittis eu. In iaculis nunc sed augue lacus viverra vitae congue. Vulputate odio ut enim blandit volutpat. Mattis aliquam faucibus purus in massa tempor. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Scelerisque eu ultrices vitae auctor. Convallis convallis tellus id interdum velit laoreet id. Pellentesque diam volutpat commodo sed egestas. Vestibulum sed arcu non odio euismod. Eu volutpat odio facilisis mauris sit amet. Tempor orci eu lobortis elementum nibh tellus. Sed enim ut sem viverra aliquet eget. In nisl nisi scelerisque eu ultrices vitae auctor.</a>
+            </div>
+            
+        </div>
+        <div id="Float-Container">
+            
+
+                <div id = "assist">
+                    <h3>Contact Information</h3>
+                    <a>Test</a>
+                </div>
+                
+
+                <div id = "assist">
+                    <h3>Page Help</h3>
+                    <a>Test</a>
+                </div>
+ 
+
+                <div id = "assist">
+                    <h3>About</h3>
+                    <a>Test</a>
+                </div>
+
+
+        </div>
+
+        <!--<a class="copyright">Copyright &copy; 2020</a>-->
+
+    </body>
+    <!--//endregion-->
+
+    <!--//region [Yellow] || JS-->
+    <script>
+        function setClass(element, a){
+            var options = ["home", "contact", "help", "about"];
+            for (i = 0; i < options.length; i++) {
+                document.getElementById(options[i]).className = "non";
+            }
+            element.className = "selected";
+            if (element.id != "home" && a){
+                window.scrollTo(0, 600);
+            }else if (a){
+                window.scrollTo(0, 0);
+            }
+        }
+        function checkScroll() {
+            if (window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop >= 530) {
+                setClass(document.getElementById("about"), false);
+            }else{
+                setClass(document.getElementById("home"), false);
+            }
+        }
+    </script>
+    <!--//endregion-->
+</html>
